@@ -799,7 +799,6 @@ class ExtendedPdo extends PDO implements ExtendedPdoInterface
         $this->beginProfile(__FUNCTION__);
 
         // remove empty constructor params list if it exists
-        $args = func_get_args();
         if (count($args) === 3 && $args[2] === array()) {
             unset($args[2]);
         }
